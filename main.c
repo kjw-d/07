@@ -1,18 +1,14 @@
 #include <stdio.h>
+int counter;
 
-int inc(int counter);
-
+void set_counter()
+{
+    counter = 20;
+}
 int main(void)
 {
-    int i = 10; 
-    printf("함수 호출 전 i=%d\n", i);
-    i = inc(i);
-    printf("함수 호출 후 i=%d\n", i); 
+    printf("counter=%d\n", counter);
+    set_counter();
+    printf("counter=%d\n", counter);
     return 0;
-}
-
-int inc(int counter)
-{
-    counter++;
-    return counter;
 }
